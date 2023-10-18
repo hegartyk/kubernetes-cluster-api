@@ -1,0 +1,13 @@
+directive @prefixedID(prefix: String!) on OBJECT
+
+extend type Query {
+  """
+  Lookup a cluster by ID.
+  """
+  cluster(
+    """
+    The cluster ID.
+    """
+    id: ID!
+  ): Cluster!
+}
